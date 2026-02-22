@@ -21,7 +21,7 @@ type OnboardRequest struct {
 
 type EligibilityRequest struct {
 	CRNumber string  `json:"cr_number"`
-	Revenue  float64 `json:"revenue"`
+	MonthlyRevenue  float64 `json:"monthly_revenue"`
 }
 
 type EligibilityResponse struct {
@@ -75,7 +75,7 @@ func main() {
 		// Call loan_service for eligibility check
 		eligReq := EligibilityRequest{
 			CRNumber: req.CRNumber,
-			Revenue:  monthlyRevenue,
+			MonthlyRevenue:  monthlyRevenue,
 		}
 
 		body, _ := json.Marshal(eligReq)
