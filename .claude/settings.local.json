@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source:*)",
+      "Bash(gvm use:*)",
+      "Bash(go build:*)"
+    ]
+  }
+}
